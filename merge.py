@@ -59,6 +59,6 @@ for sub_dir in content_list:
 		dir_to_move = os.path.join(current_folder, path_to_content )
 
 		# move the file
-		shutil.move(dir_to_move, merge_folder_path)
+		shutil.copy(dir_to_move, merge_folder_path)
 filename = random.choice(os.listdir(merge_folder_path))
 path1 = os.path.join(merge_folder_path, filename)

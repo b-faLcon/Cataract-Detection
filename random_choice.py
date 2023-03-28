@@ -3,6 +3,20 @@ import os, random, shutil
 #Prompting user to enter number of files to select randomly along with directory
 source=input("Enter the Source Directory : ")
 dest=input("Enter the Destination Directory : ")
+#dest="random_choice"
+path = os.path.join(os.getcwd(),dest)
+	
+	# Create the folder
+	# 'new_folder' in
+	# parent_folder
+try:
+	# mode of the folder
+	mode = 0o777
+
+	# Create folder
+	os.mkdir(path, mode)
+except OSError as error:
+	print(error)
 no_of_files=int(input("Enter The Number of Files To Select : "))
 
 print("%"*25+"{ Details Of Transfer }"+"%"*25)
